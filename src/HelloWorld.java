@@ -42,6 +42,7 @@ public class HelloWorld {
         int maxVal = Integer.MAX_VALUE;
         System.out.println(++maxVal);
 
+        System.out.printf("Ola %s %s %s %s %s","Jona", "with", "the", "big","heart");
     }
 
 }
