@@ -70,7 +70,7 @@ public class ControlFlowExercises {
         System.out.println("number | squared | cubed");
         System.out.println("------ | ------- | -----");
         for (int i = 1; i <= userNumber; i++) {
-            System.out.println(String.format("%-6d | %-7d | %-6d", i, i * i, i * i * i));
+            System.out.printf("%-6d | %-7d | %-6d%n", i, i * i, i * i * i);
 
         }
     }
