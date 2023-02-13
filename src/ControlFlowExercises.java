@@ -65,13 +65,23 @@ public class ControlFlowExercises {
 //        System.out.println("number | squared | cubed\n------ | ------ | ------");
 //            System.out.printf("%-6d | %=7d | %-5s%n, i, i * i, (i*i*i");
 
-        int userNumber = 0;
-        System.out.println("Here is your table!");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        for (int i = 1; i <= userNumber; i++) {
-            System.out.printf("%-6d | %-7d | %-6d%n", i, i * i, i * i * i);
+        System.out.println("Pick a number up to 100, to receive the multiple table: ");
+        int userNum = scanner.nextInt();
+        System.out.println("Do you want to continue: [y/N]");
+        String userContinue = scanner.next();
+        if (userContinue.equals("y")){
+            System.out.println("""
+            Here is a table!
 
+            number | squared | cubed
+            ------ | ------- | -----
+            """);
+            for (int i = 0; i <= 5; i += 1) {
+                System.out.println(i + "      |" + i * userNum + "       |" + i * userNum * userNum);
+            }
+
+        } else {
+            System.out.println("Ok");
         }
     }
 }
