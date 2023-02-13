@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class MethodsLecture {
 
     public static int returnTwo() {
@@ -11,6 +13,8 @@ public class MethodsLecture {
     public static void main(String[] args) {
         System.out.println(returnTwo());
         printZenith();
+        sayName("Justin", "Reich");
+        System.out.println(add(23, 22));
     };
 
     // ----------- DEFINING AND CALLING METHODS WITH VARIOUS INPUTS (examples)
@@ -107,11 +111,52 @@ public class MethodsLecture {
     // example: sayName("Justin") - "Hi Justin"
     // example: sayName("Justin", "Reich") - "Hi Justin Reich"
 
+    public static void sayName(String first, String last){
+        System.out.printf("""
+                Hello %s %s
+                """, first, last);
+    };
+
+
 
     // TODO: overload the math exercises from the curriculum exercise to work with both integers and doubles
     public static int add(int num1, int num2) {
         return num1 + num2;
+
+    };
+    public static int Subtract(int a, int b) {
+        return a - b;
+    };
+
+    public static int Multiplication(int a, int b) {
+        return a * b;
+    };
+
+    public static int Division(int a, int b) {
+        return a / b;
+    };
+
+    public static int Modulus(int a, int b){
+        return a%b;
     }
 
+    public static double add(double num1, double num2) {
+        return num1 + num2;
+    };
+    public static double Subtract(double a, double b) {
+        return a - b;
+    };
+
+    public static double Multiplication(double a, double b) {
+        return a * b;
+    };
+
+    public static double Division(double a, double b) {
+        return a / b;
+    };
+
+    public static double Modulus(double a, double b){
+        return a%b;
+    }
 
 }
