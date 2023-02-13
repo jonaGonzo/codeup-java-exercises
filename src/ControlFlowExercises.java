@@ -83,5 +83,24 @@ public class ControlFlowExercises {
         } else {
             System.out.println("Ok");
         }
+        
+        
+//        Exercise 4
+
+        System.out.println("Please enter your numeric grade (a value of 0 - 100): ");
+        int userGrade = scanner.nextInt();
+        System.out.println("Do you want to continue: [y/N]");
+        String userCont = scanner.next();
+        if(userCont.equals("y") && userGrade <= 59){
+            System.out.println("F: 59 - 0");
+        } else if(userCont.equals("y") && userGrade >=  60 && userGrade <= 66){
+            System.out.println("D: 66-60");
+        } else if(userCont.equals("y") && userGrade >=  67 && userGrade <= 79){
+            System.out.println("C: 79-67");
+        } else if(userCont.equals("y") && userGrade >=  80 && userGrade <= 87){
+            System.out.println("B: 87-80");
+        } else if(userCont.equals("y") && userGrade >=  88 && userGrade <= 100){
+            System.out.println("A: 88-100");
+        }
     }
 }
