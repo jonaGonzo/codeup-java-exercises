@@ -4,69 +4,75 @@ import java.util.Date;
 
 public class Post {
 
-    /*
-      int id
-      String title
-      String content
-      String author
-      Date created_at
-     */
+    // static variables
+    public static String nameOfBlog = "Justin's Blog";
+    public static Date whenBlogWentLive = new Date();
+    public static int maxPostContentLength = 2000;
 
-    public int id;
+
+    // instance variables
     public String title;
     public String content;
+    public int numberOfPostViews;
+    public String genre;
+    public Date createdAt;
+    public Date updatedAt;
     public String author;
-    public Date created_at;
+//    public Comment[] comments;
+
+    // instance methods
+    public String returnViewsMessage() {
+
+        return String.format("%s has %d views.", title, numberOfPostViews);
+    }
+
+    public void clearOutContent() {
+        content = "This user no longer has an active account.";
+    }
 
     public String returnAuthorDateMessage() {
-        return String.format("This post was created by %s on %s", author, created_at);
+        return String.format("This post was created by %s on %s", author, createdAt);
     }
 
-//    @Override
-//    public String toString() {
-//        return "Post{" +
-//            "id=" + id +
-//            ", title='" + title + '\'' +
-//            ", content='" + content + '\'' +
-//            ", author='" + author + '\'' +
-//            ", created_at=" + created_at +
-//            '}';
+
+    // static methods
+    public static String getLongerBlogTitle(Post p1, Post p2) {
+        if (p1.title.length() >= p2.title.length()) {
+            return p1.title;
+        } else {
+            return p2.title;
+        }
+    }
+
+//    public static Post[] getPostsByGenre(Posts[] allPosts, String genre) {
+    // filter out posts that don't match the genre
+    // return posts in genre
 //    }
 
-
-
     public static void main(String[] args) {
-        Post post1 = new Post();
-        post1.id = 1;
-        post1.title = "Day in the Life";
-        post1.content = "It happens every day...";
-        post1.author = "Overlord";
-        post1.created_at = new Date();
 
-        Post post2 = new Post();
-        post2.id = 2;
-        post2.title = "A Day";
-        post2.content = "It happens...";
-        post2.author = "Mr. Overlord";
-        post2.created_at = new Date();
+//        Math
+
+        // create post 1
+        Post p1 = new Post();
+        p1.title = "A Day in the Life";
+        p1.content = "Hello asd asdf asdf asdaf asdf.";
+        p1.numberOfPostViews = 25;
+        p1.clearOutContent();
 
 
-        System.out.println(post1.returnAuthorDateMessage());
-        System.out.println(post2.returnAuthorDateMessage());
+        // create post 2
+        Post p2 = new Post();
+        p2.title = "My Dog, Snickers";
+        p2.content = "Good doggy asfd asf asdf asdf asd fas asdf";
+        p2.numberOfPostViews = 10;
 
-//        System.out.println(post1);
+
+        // using static method
+        System.out.println(Post.getLongerBlogTitle(p1, p2));
 //
-//        System.out.println(post1.title);
-//        Post p = post1;
-//        p.title = "LOL";
-//        System.out.println(post1.title);
-//
-//
-//        System.out.println(p);
-
-//        System.out.println(post2);
-
+        // accessing static property
+        System.out.println(Post.nameOfBlog);
     }
-
 
 }
