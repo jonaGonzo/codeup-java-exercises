@@ -1,5 +1,7 @@
-public class Test {
+class Test {
     public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
-}
+    String word = "hello";
+    int num = 3;
+    String add = word + num;
+        System.out.println(add);
+    }}
