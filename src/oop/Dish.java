@@ -15,27 +15,51 @@ Add a main method and inside the method...
     1) instantiate a Dish object and assign to a variable called dish1
     2) assign creative values for each of the properties
     3) test the printSummary() method by invoking it and checking if all instance values are correctly printed
-
     */
 
-import java.security.PublicKey;
-
 public class Dish {
-
     public static int lessThanADollar = 100;
+    private Integer costInCents;
+    private String nameOfDish;
+    private Boolean wouldRecommend;
 
-    public Integer costInCents;
-    public String nameOfDish;
-    public Boolean wouldRecommend;
 
-public void printSummary(){
+    public  Dish(int price, String name , boolean like){
+        this.costInCents = price;
+        this.nameOfDish = name;
+        this.wouldRecommend = like;
+    }
+    public static int getLessThanADollar() {
+        return lessThanADollar;
+    }
+    public static void setLessThanADollar(int lessThanADollar) {
+        Dish.lessThanADollar = lessThanADollar;
+    }
+    public Integer getCostInCents() {
+        return costInCents;
+    }
+    public void setCostInCents(Integer costInCents) {
+        this.costInCents = costInCents;
+    }
+    public String getNameOfDish() {
+        return nameOfDish;
+    }
+    public void setNameOfDish(String nameOfDish) {
+        this.nameOfDish = nameOfDish;
+    }
+    public Boolean getWouldRecommend() {
+        return wouldRecommend;
+    }
+    public void setWouldRecommend(Boolean wouldRecommend) {
+        this.wouldRecommend = wouldRecommend;
+    }
+    public void printSummary(){
     System.out.printf("""
              Cost: %d¢
              Name: %s
              Recommended: %b
             """, costInCents, nameOfDish, wouldRecommend);
-}
-
+    }
 }
 
 
