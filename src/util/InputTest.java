@@ -2,9 +2,8 @@ package util;
 
 public class InputTest {
     public static void main(String[] args) {
-        Input input = new Input();
-        input.getDouble(
-        );
-//       input.getString();
+        Input test = new Input();
+        test.getDouble();
+        test.getString();
     }
 }
