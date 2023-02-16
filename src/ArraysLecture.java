@@ -2,7 +2,7 @@ public class ArraysLecture {
 
     public static void printNums(int[] nums) {
         for (int num : nums) {
-            System.out.println(num);
+//            System.out.println(num);
         }
     }
 
@@ -37,14 +37,25 @@ public class ArraysLecture {
         // System.out.println(arrayLength);
 
         // ARRAY INITIALIZER - both initialize and assign element values
-
-         String[] pets = {
-                 "Bubbles",
-                 "Bowser",
-                 "Snickers",
-                 "Sparky"
-         };
-         System.out.println(pets[3]);
+//
+//         String[] pets = {
+//                 "Bubbles",
+//                 "Bowser",
+//                 "Snickers",
+//                 "Sparky"
+//         };
+//
+//         String newPet = "Bob";
+//
+//         String[] pets1 = new String[pets.length + 1];
+//
+//         for(int i = 0; i < pets.length; i += 1) {
+//             pets1[i] = pets[i];
+//         }
+//
+//         pets1[pets1.length - 1] = newPet;
+//
+//         System.out.println(pets[3]);
 
 
 
@@ -65,6 +76,21 @@ public class ArraysLecture {
             Find the sum of all five double values using an enhanced for loop.
          */
 
+        double[] numbers = new double[5];
+
+        numbers[0] = 4.0;
+        numbers[1] = 4.1;
+        numbers[2] = 4.2;
+        numbers[3] = 4.3;
+        numbers[4] = 4.4;
+
+        double count = 0;
+        for (double number : numbers){
+            count += number;
+        System.out.println(count);
+        }
+
+
         // ANONYMOUS ARRAYS
 
         // printNums(new int[] {5, 4, 3, 2, 1});
@@ -72,20 +98,20 @@ public class ArraysLecture {
         // ====================== OTHER REFERENCE TYPE ARRAYS
 
         // arrays may contain a list of custom reference types
-        //
-        // Person p1 = new Person("Fred", 99);
-        // Person p2 = new Person("Sally", 45);
-        // Person p3 = new Person("Billy", 30);
-        //
-        // Person[] people = new Person[4];
-        //
-        // people[0] = p1;
-        // people[1] = p2;
-        // people[2] = p3;
-        //
-        // for (int i = 0; i < people.length; i += 1) {
-        //    System.out.println(people[i].getName());
-        // }
+//        //
+//         Person p1 = new Person("Fred", 99);
+//         Person p2 = new Person("Sally", 45);
+//         Person p3 = new Person("Billy", 30);
+//
+//         Person[] people = new Person[4];
+//
+//         people[0] = p1;
+//         people[1] = p2;
+//         people[2] = p3;
+//
+//         for (int i = 0; i < people.length; i += 1) {
+//            System.out.println(people[i].getName());
+//         }
 
         // using an array initializer...
 
@@ -100,7 +126,7 @@ public class ArraysLecture {
 
 
         /* TODO: create a class called Product with two private properties of name and priceInCents.
-            Add a public static method called, find average price that takes in an array of products
+            Add a public static method called, findAveragePrice that takes in an array of products
             and finds the average price of all products. Add a main method to the class to test some
             values.
          */
