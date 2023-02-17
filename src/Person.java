@@ -1,4 +1,5 @@
 import java.io.PrintStream;
+import java.util.Arrays;
 
 public class Person {
     private String name;
@@ -31,10 +32,11 @@ public class Person {
 //TODO: print a message to the console using the person's name
     }
 
-    public static Person[] addPerson(Person[] persons, Person person){
-        Person[] personPlusOne = new Person[persons.length + 1];
-        for(int i = 0; i < persons.length; i+= 1){
-            personPlusOne[i] = persons[i];
+    public static Person[] addPerson(Person[] people, Person person){
+        Person[] personPlusOne = Arrays.copyOf(people, + 1);
+//        Person[] personPlusOne = new Person[people.length + 1];
+        for(int i = 0; i < people.length; i+= 1){
+            personPlusOne[i] = people[i];
         }
         return personPlusOne;
     }

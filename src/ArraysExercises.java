@@ -2,17 +2,21 @@ import java.util.Arrays;
 
 public class ArraysExercises {
 
-    public static void main(String[] args) {
-        Person[] persons = new Person[3];
-        persons[0] = new Person("Jona");
-        persons[1] = new Person("Action");
-        persons[2] = new Person("Nando");
 
-        for(Person person : persons){
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(numbers));
+
+        Person[] peopleArry = new Person[3];
+        peopleArry[0] = new Person("Jona");
+        peopleArry[1] = new Person("Action");
+        peopleArry[2] = new Person("Nando");
+
+        for(Person person : peopleArry){
             System.out.println(person.getName());
         }
 
-//        Person[]
+        Person.addPerson(peopleArry, new Person("Bob"));
     }
 
 
