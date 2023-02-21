@@ -1,7 +1,8 @@
 import java.util.random.RandomGenerator;
 
 public class ServerNameGenerator {
-    String[] adjectives = new String[]{
+
+    private static String[] adjectives = new String[]{
            "smart",
            "kind",
            "slick",
@@ -11,9 +12,9 @@ public class ServerNameGenerator {
            "fly",
            "beautiful",
            "joyful",
-           "jolly",
+           "dark",
     };
-    String[] nouns = new String[]{
+    private static String[] nouns = new String[]{
             "House",
             "Farm",
             "Dog",
@@ -26,11 +27,16 @@ public class ServerNameGenerator {
             "truck",
     };
 
-    public static int getRandomNumber(String[] words){
-        return (int)Math.round(Math.random()*100);
+    public static String returnRandomElement(String[] strs){
+        int randomIndex = (int) (Math.random() * strs.length);
+        return strs[randomIndex];
+    }
 
-    };
-
+    public static void main(String[] args) {
+        String randomNoun = returnRandomElement(nouns).toLowerCase();
+        String randomAdj = returnRandomElement(adjectives).toLowerCase();
+        System.out.printf("%s-%s", randomAdj, randomNoun);
+    }
 
 }
 

@@ -6,6 +6,7 @@ public class Person {
     public Person(String name) {
         this.name = name;
     }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -33,12 +34,21 @@ public class Person {
     }
 
     public static Person[] addPerson(Person[] people, Person person){
-        Person[] personPlusOne = Arrays.copyOf(people, + 1);
-//        Person[] personPlusOne = new Person[people.length + 1];
+//        Person[] personPlusOne = Arrays.copyOf(people, people.length + 1);
+//        personPlusOne[people.length] = person;
+//        return personPlusOne;
+
+        Person[] personPlusOne = new Person[people.length + 1];
         for(int i = 0; i < people.length; i+= 1){
             personPlusOne[i] = people[i];
+            personPlusOne[people.length] = person;
+
         }
         return personPlusOne;
+    }
+
+    public static void printFirstMake(Person[] person){
+
     }
 
 //    public static void main(String[] args) {
