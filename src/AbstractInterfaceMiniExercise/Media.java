@@ -1,6 +1,6 @@
 package AbstractInterfaceMiniExercise;
 
-abstract class Media {
+abstract class Media implements Location {
     public void borrowMe() {
         System.out.println("Borrow me, not keep me! Please bring me back on due date, thank you.");
     }

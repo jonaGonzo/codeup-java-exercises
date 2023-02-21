@@ -10,4 +10,9 @@ class Newspapers extends Media {
         blackAndWhite.listenToMe();
         blackAndWhite.borrowMe();
     }
+
+    @Override
+    public void whereAmI() {
+
+    }
 }

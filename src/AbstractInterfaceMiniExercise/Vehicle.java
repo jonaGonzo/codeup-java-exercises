@@ -1,5 +1,8 @@
 package AbstractInterfaceMiniExercise;
 
+abstract class Vehicle {
+
+}
     //-- PART 2
     //Car
         //  on()
@@ -23,7 +26,3 @@ package AbstractInterfaceMiniExercise;
 //      demolish()
     //What class(s) should implement the PowerControllable interface?
     //What methods in the abstract class should be abstract? What methods are general to all sub-types?
-
-abstract class Vehicle {
-
-}

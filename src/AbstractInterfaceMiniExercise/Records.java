@@ -4,4 +4,9 @@ class Records extends Media {
     public void listenToMe(){
         System.out.println("Use a Record player");
     }
+
+    @Override
+    public void whereAmI() {
+
+    }
 }

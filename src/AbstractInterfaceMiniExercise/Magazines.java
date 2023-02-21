@@ -9,4 +9,9 @@ class Magazines extends Media {
         Magazines Vogue = new Magazines();
         Vogue.borrowMe();
     }
+
+    @Override
+    public void whereAmI() {
+
+    }
 }
