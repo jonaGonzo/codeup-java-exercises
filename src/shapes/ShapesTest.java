@@ -13,7 +13,10 @@ public class ShapesTest {
     // VIEWPORT //
     public static void main(String[] args) {
         Measurable myShape = new Square(10);
-        System.out.println(myShape.getArea());
+        System.out.println(myShape.getPerimeter());
+
+        Measurable myOtherShape = new Rectangle(20, 40);
+        System.out.println(myOtherShape.getPerimeter());
 
 
 //        Rectangle box1 = new Rectangle(4, 5);

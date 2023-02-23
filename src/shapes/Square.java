@@ -17,5 +17,13 @@ package shapes;
          return side * side;
      }
 
+     @Override
+     public void setLength(double length) {
 
-}
+     }
+
+     @Override
+     public void setWidth(double width) {
+
+     }
+ }

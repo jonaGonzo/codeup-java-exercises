@@ -9,6 +9,17 @@ import util.Input;
   public Rectangle(double length, double width){
    super(length, width);
   }
+
+  @Override
+  public void setLength(double length) {
+
+  }
+
+  @Override
+  public void setWidth(double width) {
+
+  }
+
   @Override
   public double getPerimeter() {
    return (this.length * 2) + (this.width * 2);
