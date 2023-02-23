@@ -33,7 +33,14 @@ public class Input {
     }
 
     public int getInt() {
-        return this.scanner.nextInt();
+        int userInput = 0;
+        try {
+            userInput = Integer.parseInt(this.getString());
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+
+        return userInput;
     }
 
     public double getDouble(double min, double max) {
@@ -48,10 +55,13 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Enter a number with a decimal: ");
-        double userInput = scanner.nextDouble();
-        System.out.printf("Your number: %f", userInput );
-        return userInput;
+      double userInput = 0;
+      try{
+          userInput = Double.parseDouble(this.getString());
+      } catch (NumberFormatException e){
+          e.printStackTrace();
+      }
+      return userInput;
     }
 
 
