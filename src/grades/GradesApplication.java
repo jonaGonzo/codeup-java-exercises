@@ -4,7 +4,7 @@ import java.util.*;
 
 public class GradesApplication {
 
-    public static Map<String, Student> createStudents(){
+    public static Map<String, Student> createStudents() {
 
         Map<String, Student> students = new HashMap<>();
 
@@ -35,39 +35,53 @@ public class GradesApplication {
         return students;
     }
 
-    public static void displayUserNames(List<String> usernames){
+    public static void displayUserNames(List<String> usernames) {
         String outputOfUserNames = "";
         for (String username : usernames) {
             outputOfUserNames += String.format("|%s| ", username);
         }
         System.out.printf("""
                 Here are the GitHub usernames of our students:
-                
+                                
                 %s
-                
-                """,outputOfUserNames);
+                                
+                """, outputOfUserNames);
 
     }
 
-    public static void displayUser(Student student, String username){
-        System.out.printf("""
-                Name: %s - GitHub Username: %s
-                Current Average: %f
-                """, student.getName(), username, student.getGradeAverage());
+    public static void displayUser(Student student, String username) {
+
+        if (student != null) {
+            System.out.printf("""
+                    Name: %s - GitHub Username: %s
+                    Current Average: %f
+                    """, student.getName(), username, student.getGradeAverage());
+        } else {
+            System.out.println("Sorry, no student found with the GitHub username of \"" + username + "\".");
+        }
     }
+
 
     public static void main(String[] args) {
         System.out.println("Welcome!\n");
         Map<String, Student> students = createStudents();
         Scanner scan = new Scanner(System.in);
+        String willContinue;
+        do {
+            List<String> usernames = new ArrayList<String>(students.keySet());
+            displayUserNames(usernames);
 
-        List<String> usernames = new ArrayList<String>(students.keySet());
-        displayUserNames(usernames);
+            System.out.println("What student would you like to see more information on?\n");
+            String username = scan.nextLine();
+            Student student = students.get(username);
+            displayUser(student, username);
 
-        System.out.println("What student would you like to see more information on?\n");
-        String username = scan.nextLine();
-        Student student = students.get(username);
-        displayUser(student, username);
+            System.out.println("\nWould yo like to see another student? (Y/n?)");
 
+            willContinue = scan.nextLine();
+
+        } while (willContinue.equalsIgnoreCase("Y"));
+
+        System.out.println("\nGoodbye, and have a wonderful day!");
     }
 }
