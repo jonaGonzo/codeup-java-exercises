@@ -14,7 +14,7 @@ public class Student {
 
     // returns the student's name
     public String getName(){
-        return name;
+        return this.name;
     }
     // adds the given grade to the grades property
     public void addGrade(Double grade){
